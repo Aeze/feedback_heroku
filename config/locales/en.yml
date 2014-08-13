@@ -20,4 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  settings:
+    attributes:
+      app_name:
+        name: 'Application Name'
+      app_icon:
+        name: 'Application Icon URL'
+      about_text:
+        name: 'About Text'
+      contact_email:
+        name: 'Contact E-mail'
