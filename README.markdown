@@ -20,7 +20,7 @@ Prerequisites: [Heroku Toolbelt](https://toolbelt.heroku.com/)
 
 After you deploy you'll have to migrate the database:
 
-`heroku run -a app-name rake db:migrate`
+`heroku run -a app_name rake db:migrate`
 
 And then your should be up and running on Heroku. :)
 
