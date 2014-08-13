@@ -1,6 +1,2 @@
-<h1>Editing issue</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @issue %> |
-<%= link_to 'Back', issues_path %>
+<h1><%= "Edit #{Issue.model_name.human}" %></h1>
+<%= render :partial => 'form' %>
