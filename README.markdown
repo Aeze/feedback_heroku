@@ -1,14 +1,15 @@
 Feedback
-====
-Feedback is designed to be an easily deployable solution for conslidating user feedback as well as managing bug reports/support tickets. 
+===
+Feedback is designed to be an easily deployable solution for conslidating user feedback as well as managing bug reports/support tickets. You can easily deploy an instance of this application for each product you wish to manage at its own custom domain. 
 
 Features
 ===
 - Easy deploy to Heroku
 - User/admin authentication 
-- Voting system for issues
-- Comments on issues
-- Moderation tools
+- Fuzzy searching
+- Voting system 
+- Comments 
+- Powerful moderation tools 
 
 To Deploy
 ===

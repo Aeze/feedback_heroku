@@ -1,6 +1,6 @@
 {
   "name": "Feedback",
-  "description": "Feedback Application",
+  "description": "Easily deployable Feedback application. Please read the Readme located at the repository URL for further instructions.",
   "repository": "https://github.com/Aeze/feedback/tree/master",
   "logo": "https://node-js-sample.herokuapp.com/node.svg"
 }
