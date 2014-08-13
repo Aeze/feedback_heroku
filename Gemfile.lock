@@ -104,6 +104,11 @@ GEM
       i18n
       rails (>= 3.0)
       sass-rails (~> 4.0.0)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (4.1.4)
       actionpack (= 4.1.4)
       activesupport (= 4.1.4)
@@ -165,6 +170,7 @@ DEPENDENCIES
   rails (= 4.1.4)
   rails-settings-cached (= 0.4.1)
   rails-settings-ui
+  rails_12factor
   sdoc (~> 0.4.0)
   spring
   sqlite3

@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 
+# For deploying on Heroku
+gem 'rails_12factor', group: :production
 
 # Use sqlite3 in development, postgres in production (for Heroku)
 group :development do 
