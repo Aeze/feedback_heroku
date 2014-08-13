@@ -11,6 +11,7 @@
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th>Actions</th>
+      <th>Comments</th>
     </tr>
   </thead>
   <tbody>
@@ -29,6 +30,7 @@
                       :data => { :confirm => 'Are you sure?' },
                       :class => 'btn btn-small' %>
         </td>
+        <td></td>
       </tr>
     <% end %>
   </tbody>

@@ -48,3 +48,6 @@ gem 'rails-settings-ui'
 #Votes
 gem 'acts_as_votable'
 
+#Comments
+gem 'commontator'
+

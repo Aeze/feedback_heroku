@@ -1,21 +1,17 @@
 <%= form_for @issue, :html => { :class => 'forms' } do |f| %>
-  <ul>
-    <li>
+
       <%= f.label :name, :class => 'bold' %>
       <%= f.text_field :name %>
-    </li>
-    <li>
+
       <%= f.label :issue_type, :class => 'bold' %>
-      <%= f.text_field :issue_type %>
-    </li>
-    <li>
+      <%= select_tag(:issue_type, options_for_select([['Bug Report', 'Bug Report'], ['Feature Request', 'Feature Request']]), class: 'width-30' )%>
+      <div class="forms-desc">Where you from?</div>
+ 
       <%= f.label :description, :class => 'bold' %>
       <%= f.text_area :description %>
-    </li>
-
-    <li>
+  
       <%= f.submit nil, :class => 'btn' %>
       <%= link_to 'Cancel', issues_path, :class => 'btn' %>
-    <li>
-  </ul>
+
+
 <% end %>
