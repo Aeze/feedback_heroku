@@ -28,6 +28,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     acts_as_votable (0.10.0)
+    angularjs-rails (1.2.21)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     bootstrap-sass (3.2.0.1)
@@ -172,6 +173,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_votable
+  angularjs-rails
   coffee-rails (~> 4.0.0)
   commontator
   devise

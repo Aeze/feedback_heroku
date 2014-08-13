@@ -1,5 +1,14 @@
 <%- model_class = Issue -%>
 <h1><%= model_class.model_name.human.pluralize %></h1>
+<hr>
+<form method="post" action="" class="forms">
+    <label class="input-groups">
+        <input type="text" name="search" placeholder="Search for an issue" />
+        <span class="btn-append">
+            <button class="btn btn-green">Go</button>
+        </span>
+    </label>
+</form>
 
 <table class="striped">
   <thead class="thead-black">
@@ -11,7 +20,6 @@
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th>Actions</th>
-      <th>Comments</th>
     </tr>
   </thead>
   <tbody>
@@ -30,7 +38,6 @@
                       :data => { :confirm => 'Are you sure?' },
                       :class => 'btn btn-small' %>
         </td>
-        <td></td>
       </tr>
     <% end %>
   </tbody>

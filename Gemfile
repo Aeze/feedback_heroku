@@ -16,7 +16,8 @@ group :production do
 end
 
 # Use kube as css framework
-gem "kube-rails"
+gem 'kube-rails'
+gem 'angularjs-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

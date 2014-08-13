@@ -4,7 +4,7 @@
       <%= f.text_field :name %>
 
       <%= f.label :issue_type, :class => 'bold' %>
-      <%= select_tag(:issue_type, options_for_select([['Bug Report', 'Bug Report'], ['Feature Request', 'Feature Request']]), class: 'width-30' )%>
+      <%= f.select(:issue_type, options_for_select(['Bug Report', 'Feature Request']), class: 'width-30' )%>
       <div class="forms-desc">Where you from?</div>
  
       <%= f.label :description, :class => 'bold' %>
