@@ -11,6 +11,10 @@
 </dl>
 
 <div>
+  <%= link_to 'Upvote Issue', 
+              upvote_issue_path(@issue), 
+              method: :put, 
+              class: 'btn' %>
   <%= link_to 'Back', issues_path, :class => 'btn'  %>
   <%= link_to 'Edit', edit_issue_path(@issue), :class => 'btn' %>
   <%= link_to 'Destroy', issue_path(@issue),

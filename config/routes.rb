@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   mount RailsSettingsUi::Engine, at: 'settings'
   devise_for :users
-  resources :issues
+  resources :issues do 
+    member do 
+      put 'upvote', to: 'issues#upvote'
+      put 'nullify', to: 'issues#nullify'
+    end
+  end
 
   get 'pages/home'
 

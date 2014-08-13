@@ -45,3 +45,6 @@ gem "rails-settings-cached", "0.4.1"
 gem 'rails-settings-ui'
 
 
+#Votes
+gem 'acts_as_votable'
+

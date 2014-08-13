@@ -1,6 +1,6 @@
 class IssuesController < ApplicationController
-  before_action :set_issue, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :set_issue, only: [:show, :edit, :update, :destroy, :upvote]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :upvote]
 
   # GET /issues
   # GET /issues.json
@@ -60,6 +60,14 @@ class IssuesController < ApplicationController
       format.html { redirect_to issues_url, notice: 'Issue was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def upvote
+    @issue.upvote_by current_user
+    redirect_to issues_path
+  end
+
+  def nullify
   end
 
   private
