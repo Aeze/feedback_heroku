@@ -51,3 +51,6 @@ gem 'acts_as_votable'
 #Comments
 gem 'commontator'
 
+#App Server
+gem 'unicorn', group: :production
+
