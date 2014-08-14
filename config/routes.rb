@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount RailsSettingsUi::Engine, at: 'settings'
+  devise_for :admins
   devise_for :users
   resources :issues do 
     member do 
@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get 'pages/home'
 
+  mount RailsSettingsUi::Engine, at: 'settings'
   mount Commontator::Engine => '/commontator'
 
   root 'pages#home'
