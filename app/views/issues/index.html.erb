@@ -13,7 +13,7 @@
 <table class="striped">
   <thead class="thead-black">
     <tr>
-      <th>Upvotes</th>
+      <th></th>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:issue_type) %></th>
@@ -30,7 +30,7 @@
         <td><%= issue.name %></td>
         <td><%= issue.issue_type %></td>
         <td><%= issue.description %></td>
-        <td><%=l issue.created_at %></td>
+        <td><%= issue.created_at.to_s(:short) %></td>
         <td>
           <%= link_to 'Edit', edit_issue_path(issue), :class => 'btn btn-small' %>
           <%= link_to 'Destroy', issue_path(issue),
