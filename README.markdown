@@ -30,6 +30,8 @@ To Use
 ===
 When you first go to your application's URL you'll be prompted to create an administrator account. You should do this immediately because there is only one administrator allowed at one time. You can then go to http://yourappurl.com/settings to modify global settings for the application.
 
-If you go to http://yourappurl.com/admin you can find a dashboard where you can modify users, issues, and other aspects of the site. 
+At http://yourappurl.com/admin you can find a dashboard where you can modify users, issues, and other aspects of the site. 
+
+At http://yourappurl.com/posts you can create news posts for version updates, general announcements, etc.
 
 
