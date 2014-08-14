@@ -1,20 +1,13 @@
-<form method="post" action="" class="forms">
-    <label class="input-groups">
-        <input type="text" name="search" placeholder="Search for an issue" />
-        <span class="btn-append">
-            <button class="btn btn-green">Go</button>
-        </span>
-    </label>
-</form>
-
 <div class="units-row">
-  <div class="unit-30">
-    <h4 class="text-centered">Top Feature Requests</h4>
-  </div>
-  <div class="unit-30">
-    <h4 class="text-centered">Top Issues</h4>
+  <div class="unit-70">
+    <% @posts.each do |p| %>
+      <h3><%= p.name %></h3>
+      <p><%= p.content %></p>
+    <% end %>
   </div>
   <div class="unit-30">
     <h4 class="text-centered">Latest Developer Posts</h4>
+    <h4 class="text-centered">Top Feature Requests</h4>
+    <h4 class="text-centered">Top Issues</h4>
   </div>
 </div>
