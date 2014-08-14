@@ -1,11 +1,14 @@
 <div class="units-row">
   <div class="unit-70">
+  <p><%= AppSettings.about_text %></p>
+
     <% @posts.each do |p| %>
       <h3><%= p.name %></h3>
       <p><%= p.content %></p>
     <% end %>
   </div>
   <div class="unit-30">
+  <img src="<%= AppSettings.app_icon %>" alt="<%= AppSettings.app_name %>">
     <h4 class="text-centered">Latest Developer Posts</h4>
     <h4 class="text-centered">Top Feature Requests</h4>
     <h4 class="text-centered">Top Issues</h4>
