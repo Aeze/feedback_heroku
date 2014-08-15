@@ -5,4 +5,6 @@ class Admin < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :lockable
 
   has_many :posts
+
+  validates_presence_of :username
 end

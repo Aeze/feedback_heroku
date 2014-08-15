@@ -3,7 +3,9 @@ class Issue < ActiveRecord::Base
   acts_as_commontable
 
   validates_presence_of :name, :issue_type, :description
-
+  validates_uniqueness_of :name, :description
+  validates :issue_type, inclusion: { in: %w(Bug\ Report Feature\ Request),
+    message: "%{value} is not a valid type" }
 
   def vote_count
     self.votes_for.count
