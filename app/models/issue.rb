@@ -15,4 +15,5 @@ class Issue < ActiveRecord::Base
     Issue.all.sort_by(&:vote_count).reverse.take(5)
   end
 
+  belongs_to :user
 end

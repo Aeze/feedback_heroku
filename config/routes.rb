@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get 'pages/home'
 
+  get 'pages/admin'
+
   mount RailsSettingsUi::Engine, at: 'settings'
   mount Commontator::Engine => '/commontator'
 
