@@ -15,13 +15,14 @@ group :production do
   gem 'pg'
 end
 
-# Use kube as css framework
+# Frontend stuff
 gem 'kube-rails'
 gem 'angularjs-rails'
 gem 'lodash-rails'
 gem 'underscore-rails'
 
 gem 'will_paginate', '~> 3.0'
+gem 'tinymce-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

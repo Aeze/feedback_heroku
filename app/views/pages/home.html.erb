@@ -3,7 +3,7 @@
   <img src="http://placehold.it/750x200" alt="">
     <% @posts.each do |p| %>
       <h3><%= p.name %></h3>
-      <p><%= p.content %></p>
+      <p><%= raw p.content %></p>
     <% end %>
 
     <%= will_paginate @posts %>
