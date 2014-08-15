@@ -1,12 +1,12 @@
 <%- model_class = Issue -%>
 <h1><%= model_class.model_name.human.pluralize %></h1>
 <hr>
-<form method="post" action="" class="forms">
+
+<div ng-controller="IssuesCtrl">
+
+<form action="" class="forms">
     <label class="input-groups">
-        <input type="text" name="search" placeholder="Search for an issue" />
-        <span class="btn-append">
-            <button class="btn btn-green">Go</button>
-        </span>
+        <input ng-model="qSearch" type="text" name="search" placeholder="Search for an issue" />
     </label>
 </form>
 
@@ -23,33 +23,23 @@
   <thead class="thead-black">
     <tr>
       <th></th>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:issue_type) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
-    <% @issues.each do |issue| %>
-      <tr>
-        <td><%= issue.votes_for.size %></td>
-        <td><%= link_to issue.id, issue_path(issue) %></td>
-        <td><%= issue.name %></td>
-        <td><%= issue.issue_type %></td>
-        <td><%= issue.description %></td>
-        <td><%= issue.created_at.to_s(:short) %></td>
-        <td>
-          <%= link_to 'Edit', edit_issue_path(issue), :class => 'btn btn-small' %>
-          <%= link_to 'Destroy', issue_path(issue),
-                      :method => :delete,
-                      :data => { :confirm => 'Are you sure?' },
-                      :class => 'btn btn-small' %>
-        </td>
-      </tr>
-    <% end %>
+    <tr ng-repeat="issue in issues | fuzzyFilter:qSearch">
+      <td>x</td>
+      <td>{{issue.name}}</td>
+      <td>{{issue.issue_type}}</td>
+      <td>{{issue.description}}</td>
+      <td>{{issue.created_at}}</td>
+    </tr>
   </tbody>
 </table>
 
 <%= link_to 'New', new_issue_path, :class => 'btn' %>
+
+</div>
