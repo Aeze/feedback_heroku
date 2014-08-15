@@ -24,4 +24,8 @@ function IssuesCtrl($scope, $http) {
   $http.get('/issues.json').success(function(data) {
       $scope.issues = data;
     });
+
+  $scope.highlightButton = function() {
+    console.log("Gansta");
+  };
 }

@@ -2,44 +2,42 @@
 <h1><%= model_class.model_name.human.pluralize %></h1>
 <hr>
 
+<%= link_to 'New', new_issue_path, :class => 'btn' %>
+
 <div ng-controller="IssuesCtrl">
 
 <form action="" class="forms">
-    <label class="input-groups">
-        <input ng-model="qSearch" type="text" name="search" placeholder="Search for an issue" />
+    <label>
+        <input class="width-50" ng-model="qSearch" type="text" name="search" placeholder="Search for an issue" />
     </label>
 </form>
 
 <nav class="navbar">
-    <ul>
-        <li><button class="btn btn-green">Bug Reports</button></li>
-        <li><button class="btn">Feature Requests</button></li>
-        <li><button class="btn btn-green">Active</button></li>
-        <li><button class="btn">Closed</button></li>
+    <ul ng-init="selectedOption = 'all'">
+      <li><button ng-click="buttonFilter = null; selectedOption = 'all';"class="btn" ng-class="{'btn-green':selectedOption === 'all'}">All Types</button></li>
+      <li><button ng-click="buttonFilter = {issue_type: 'Bug Report'}; selectedOption = 'bugs';" class="btn" ng-class="{'btn-green':selectedOption === 'bugs'}">Bug Reports</button></li>
+      <li><button ng-click="buttonFilter = {issue_type: 'Feature Request'}; selectedOption = 'features';"class="btn" ng-class="{'btn-green':selectedOption === 'features'}">Feature Requests</button></li>
     </ul>
 </nav>
 
 <table class="striped">
   <thead class="thead-black">
     <tr>
-      <th></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:issue_type) %></th>
+      <th>Votes</th>
+      <th>Issue</th>
+      <th>Type</th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="issue in issues | fuzzyFilter:qSearch">
-      <td>x</td>
-      <td>{{issue.name}}</td>
+    <tr ng-repeat="issue in issues | fuzzyFilter:qSearch | filter:buttonFilter">
+      <td><h5 class="text-centered">{{issue.upvotes}}</h5></td>
+      <td><a href="{{issue.url}}">{{issue.name}}</a></td>
       <td>{{issue.issue_type}}</td>
       <td>{{issue.description}}</td>
       <td>{{issue.created_at}}</td>
     </tr>
   </tbody>
 </table>
-
-<%= link_to 'New', new_issue_path, :class => 'btn' %>
-
 </div>
