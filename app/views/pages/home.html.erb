@@ -1,16 +1,32 @@
 <div class="units-row">
   <div class="unit-70">
-  <p><%= AppSettings.about_text %></p>
-
     <% @posts.each do |p| %>
       <h3><%= p.name %></h3>
       <p><%= p.content %></p>
     <% end %>
   </div>
-  <div class="unit-30">
-  <img src="<%= AppSettings.app_icon %>" alt="<%= AppSettings.app_name %>">
-    <h4 class="text-centered">Latest Developer Posts</h4>
-    <h4 class="text-centered">Top Feature Requests</h4>
-    <h4 class="text-centered">Top Issues</h4>
+    <div class="unit-30">
+    <p><%= AppSettings.about_text %></p>
+
+        <h4 class="text-centered">Latest Dev Posts</h4>
+
+        <h4 class="text-centered">Top Bugs</h4>
+        <nav class="nav nav-stroked">
+          <ul>
+          <% @bug_reports.each do |bug| %>
+            <li><a href="/issues/<%= bug.id %>"><%= bug.name %></a></li>
+          <% end %>
+          </ul>
+        </nav>
+
+        <h4 class="text-centered">Top Features</h4>
+        <nav class="nav nav-stroked">
+          <ul>
+            <% @feature_requests.each do |feature| %>
+              <li><a href="/issues/<%= feature.id %>"><%= feature.name %></a></li>
+            <% end %>
+          </ul>
+        </nav>
+
   </div>
 </div>

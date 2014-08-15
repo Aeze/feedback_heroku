@@ -26,6 +26,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer',  platforms: :ruby
 
+gem 'faker', '~> 1.1.2'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -62,7 +64,6 @@ group :development, :test do
 end
 
 group :test do 
-  gem 'faker', '~> 1.1.2'
   gem 'capybara', '~> 2.1.0'
   gem 'database_cleaner', '~> 1.0.1'
   gem 'launchy', '~> 2.3.0'

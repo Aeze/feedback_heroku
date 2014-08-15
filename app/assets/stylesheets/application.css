@@ -14,8 +14,12 @@
  *= require_self
  */
 
+.navbar {
+  margin-bottom: 0;
+}
 
 #footer p {
   font-size: 11px;
   color: #bbb;
 }
+

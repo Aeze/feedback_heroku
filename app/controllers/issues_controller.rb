@@ -80,4 +80,5 @@ class IssuesController < ApplicationController
     def issue_params
       params.require(:issue).permit(:name, :issue_type, :description)
     end
+
 end
