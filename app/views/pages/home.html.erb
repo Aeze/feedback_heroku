@@ -5,6 +5,8 @@
       <h3><%= p.name %></h3>
       <p><%= p.content %></p>
     <% end %>
+
+    <%= will_paginate @posts %>
   </div>
     <div class="unit-30">
     <p><%= AppSettings.about_text %></p>
