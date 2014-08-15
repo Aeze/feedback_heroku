@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   end
 
   get 'pages/home'
-
-  get 'pages/admin'
+  get 'admin', to: 'pages#admin'
+  get 'contact', to: 'pages#contact'
 
   mount RailsSettingsUi::Engine, at: 'settings'
   mount Commontator::Engine => '/commontator'

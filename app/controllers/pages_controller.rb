@@ -13,4 +13,7 @@ class PagesController < ApplicationController
     @posts = Post.all
     @issues = Issue.all
   end
+
+  def contact
+  end
 end
