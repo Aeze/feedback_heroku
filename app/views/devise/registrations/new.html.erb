@@ -1,21 +1,39 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="units-row">
+  <div class="unit-50">
+  <h2><%= resource_name.to_s.humanize %> Sign Up</h2>
+    
+  <%= form_for(resource, :html => { :class => 'forms' }, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+  
+  <label class="bold">Username
+  <%= f.text_field :username, autofocus: true %>
+  </label>
 
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username, autofocus: true %></div>
+  <label class="bold">E-mail
+  <%= f.email_field :email %>
+  </label>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <label class="bold">Password
+    <%= f.password_field :password, autocomplete: "off" %>
+  </label>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+  <label class="bold">Password
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </label>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+  <p><%= f.submit "Sign up", class: 'btn-green btn' %></p>
+  <% end %>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+  <%= render "devise/shared/links" %>
 
-<%= render "devise/shared/links" %>
+  </div>
+  <div class="unit-50">
+  <% if resource_name.to_s == 'admin' %>
+    <p>This is some text about Admin Registration.</p>
+
+    <% end %>
+  </div>
+</div>
+
+
+
