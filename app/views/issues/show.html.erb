@@ -1,26 +1,37 @@
-<%- model_class = Issue -%>
-<h1><%= model_class.model_name.human %></h1>
+<div class="units-row">
+  
+<div class="unit-70">
+  
 
-<dl>
-  <dt class="bold"><%= model_class.human_attribute_name(:name) %>:</dt>
-  <dd><%= @issue.name %></dd>
-  <dt class="bold"><%= model_class.human_attribute_name(:issue_type) %>:</dt>
-  <dd><%= @issue.issue_type %></dd>
-  <dt class="bold"><%= model_class.human_attribute_name(:description) %>:</dt>
-  <dd><%= @issue.description %></dd>
-</dl>
+<h1><%= @issue.name %></h1>
+<h6><%= @issue.issue_type %></h6>
+<br />
+<p><%= @issue.description %></p>
 
-<div>
-  <%= link_to 'Upvote Issue', 
-              upvote_issue_path(@issue), 
-              method: :put, 
-              class: 'btn' %>
-  <%= link_to 'Back', issues_path, :class => 'btn'  %>
-  <%= link_to 'Edit', edit_issue_path(@issue), :class => 'btn' %>
+</div>
+<div class="unit-30">
+  <p>Posted By: <%= @issue.user.username %></p>
+  <% if current_user.id == @issue.user.id %>
+    <%= link_to 'Edit', edit_issue_path(@issue), :class => 'btn btn-small' %>
   <%= link_to 'Destroy', issue_path(@issue),
               :method => 'delete',
               :data => { :confirm => 'Are you sure?' },
-              :class => 'btn' %>
+              :class => 'btn btn-small' %> <br /><br />
+  <% end %>
+                <%= link_to 'Upvote Issue', 
+              upvote_issue_path(@issue), 
+              method: :put, 
+              class: 'btn btn-small' %>
+</div>
 </div>
 
+
+
+<div class="units-row">
+  
+<div class="unit-100">
+
 <div><%= commontator_thread(@issue) %></div>
+
+</div>
+</div>
