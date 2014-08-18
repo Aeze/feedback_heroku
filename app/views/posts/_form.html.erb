@@ -10,12 +10,14 @@
   <%= f.text_area :content, :class => "tinymce", :rows => 20, :cols => 80 %>
   </label>
   
-  <label class="bold">Published Date
-  <%= f.date_select :date_posted, class: "forms-inline-list" %>
+  <label class="bold custom_date">Published Date
+  <%= f.date_select :date_posted %>
   </label>
 
+  <p>
   <%= f.submit 'Save', class: 'btn btn-green' %>
-
+  <%= link_to 'Back', posts_path, class:'btn' %>
+  </p>
   <% end %>
 
 

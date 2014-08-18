@@ -4,7 +4,6 @@
   %tr
     %th Name
     %th Content
-    %th Admin
     %th Date posted
     %th
     %th
@@ -14,7 +13,6 @@
     %tr
       %td= post.name
       %td= post.content
-      %td= post.admin_id
       %td= post.date_posted
       %td= link_to 'Show', post
       %td= link_to 'Edit', edit_post_path(post)
