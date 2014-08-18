@@ -6,19 +6,19 @@
   <%= devise_error_messages! %>
   
   <label class="bold">Username
-  <%= f.text_field :username, autofocus: true %>
+  <%= f.text_field :username, autofocus: true, class: 'width-50' %>
   </label>
 
   <label class="bold">E-mail
-  <%= f.email_field :email %>
+  <%= f.email_field :email, class: 'width-50' %>
   </label>
 
   <label class="bold">Password
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", class: 'width-50' %>
   </label>
 
   <label class="bold">Password
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'width-50' %>
   </label>
 
   <p><%= f.submit "Sign up", class: 'btn-green btn' %></p>
@@ -29,8 +29,9 @@
   </div>
   <div class="unit-50">
   <% if resource_name.to_s == 'admin' %>
-    <p>This is some text about Admin Registration.</p>
-
+    <p>Please register an administrator account immediately.</p>
+  <% else %>
+    <p>This is some text about User registration.</p>
     <% end %>
   </div>
 </div>

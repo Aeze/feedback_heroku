@@ -1,0 +1,22 @@
+<%= tinymce_assets %>
+
+  <%= form_for @post, :html => { :class => 'forms' } do |f| %>
+
+  <label class="bold">Post Title 
+  <%= f.text_field :name, class: 'width-50' %>
+  </label>
+
+  <label class="bold">Post Content
+  <%= f.text_area :content, :class => "tinymce", :rows => 20, :cols => 80 %>
+  </label>
+  
+  <label class="bold">Published Date
+  <%= f.date_select :date_posted, class: "forms-inline-list" %>
+  </label>
+
+  <%= f.submit 'Save', class: 'btn btn-green' %>
+
+  <% end %>
+
+
+<%= tinymce %>

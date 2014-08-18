@@ -3,6 +3,7 @@
   <img src="<%= AppSettings.app_header_image %>" alt="">
     <% @posts.each do |p| %>
       <h3><%= p.name %></h3>
+      <div class="forms-desc"><%= p.date_posted %></div>
       <p><%= raw p.content %></p>
     <% end %>
 
