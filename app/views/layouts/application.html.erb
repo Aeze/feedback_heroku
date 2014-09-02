@@ -8,10 +8,11 @@
 </head>
 <body>
 
-<div class="units-row">
-<div class="unit-centered unit-80">
-    
 <%= render :partial => "layouts/header" %>
+
+<div class="units-row">
+<div class="unit-10"><br /></div>
+<div class="unit-90">    
 
 <% flash.each do |key, value| %>
   <%= content_tag :div, value, class: "flash #{key}" %>

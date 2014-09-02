@@ -24,3 +24,56 @@
 }
 
 .custom_date > select { display: inline !important; }
+
+.header-bar {
+  background: rgb(45,52,61);
+  height: 60px;
+}
+
+header {
+  padding-top: 15px;
+}
+
+header h4 {
+  color: rgb(255, 210, 0);
+  margin-right: 1em;
+}
+
+header .navbar ul li {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+header .navbar ul li a {
+  padding-top: 4px;
+  width: 80px;
+  color: #fff;
+  height: 60px;
+  line-height: 50px;
+  margin-top: -15px;
+  vertical-align: middle;
+}
+
+header .navbar ul li a:hover {
+  background: rgb(75,80,80);
+  color: #fff;
+}
+
+.side {
+padding: 2em;
+color: #555;
+}
+
+.side a {
+  color: #555;
+}
+
+.bugs-bar {
+  background: #e6e6e6; 
+  height: 200px;
+}
+
+.features-bar {
+  background: #eee;
+  min-height: 200px;
+}

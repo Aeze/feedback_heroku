@@ -1,25 +1,32 @@
-<br />
+<div class="units-row">
+<div class="unit-centered unit-100 header-bar">
+<div class="units-row">
+<div class="unit-centered unit-80">
+        
 <header class="group">
     <nav class="navbar navbar-left">
         <ul>
             <li><h4><%= AppSettings.app_name %></h4></li>
-            <li><a href="/">Home</a></li>
-            <li><a href="/issues">Issues</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/" class="text-centered">Home</a></li>
+            <li><a href="/issues" class="text-centered">Issues</a></li>
+            <li><a href="/contact" class="text-centered">Contact</a></li>
         </ul>
     </nav>
     <nav class="navbar navbar-right">
         <ul>
         <% if admin_signed_in? %>
-        <li><a href="/admin">Admin Panel</a></li>
+        <li><a href="/admin" class="text-centered">Admin</a></li>
         <% end %>
         <% if user_signed_in? %>
           <li><%= current_user.email %></li>
         <% else %>
-          <li><a href="/users/sign_in">Sign In</a></li>
-          <li><a href="/users/sign_up">Sign Up</a></li>
+          <li><a href="/users/sign_in" class="text-centered">Sign In</a></li>
+          <li><a href="/users/sign_up" class="text-centered">Sign Up</a></li>
         <% end %>
         </ul>
     </nav>
 </header>
-<hr>
+</div>
+</div>
+</div>
+</div>

@@ -1,36 +1,46 @@
 <div class="units-row">
-  <div class="unit-70">
-  <img src="<%= AppSettings.app_header_image %>" alt="">
+  <div class="unit-60">
+  <h2>Recent Upates</h2>
     <% @posts.each do |p| %>
-      <h3><%= p.name %></h3>
-      <div class="forms-desc"><%= p.date_posted %></div>
+    <div class="units-row">
+      <div class="unit-10"><img src="http://placehold.it/30/30" alt=""></div>
+      <div class="unit-90"><span class="forms-desc">Marcus Orochena | <%= p.date_posted %></span></div>
+    </div>
+    <div class="units-row">
+      <div class="unit-10"><br/></div>
+      <div class="unit-90">
+        <h5><%= p.name %></h5>
       <p><%= raw p.content %></p>
+      </div>
+    </div>
+      
     <% end %>
 
     <%= will_paginate @posts %>
   </div>
-    <div class="unit-30">
-    <p><%= AppSettings.about_text %></p>
-
-        <h4 class="text-centered">Latest Dev Posts</h4>
-
-        <h4 class="text-centered">Top Bugs</h4>
+    <div class="unit-40">
+        <div class="side bugs-bar">
+          
+        <h4>Top Bugs</h4>
         <nav class="nav nav-stroked">
           <ul>
           <% @bug_reports.each do |bug| %>
-            <li><a href="/issues/<%= bug.id %>"><%= bug.name %></a></li>
+            <li><%= bug.vote_count %> <a href="/issues/<%= bug.id %>"><%= bug.name %></a></li>
           <% end %>
           </ul>
         </nav>
+        </div>
 
-        <h4 class="text-centered">Top Features</h4>
+        <div class="side features-bar">
+        <h4>Top Features</h4>
         <nav class="nav nav-stroked">
           <ul>
             <% @feature_requests.each do |feature| %>
-              <li><a href="/issues/<%= feature.id %>"><%= feature.name %></a></li>
+              <li><a href="/issues/<%= feature.id %>"> <%= feature.vote_count %> <%= feature.name %></a></li>
             <% end %>
           </ul>
         </nav>
+        </div>
 
   </div>
 </div>
