@@ -7,21 +7,21 @@
     <nav class="navbar navbar-left">
         <ul>
             <li><h4><%= AppSettings.app_name %></h4></li>
-            <li><a href="/" class="text-centered">Home</a></li>
-            <li><a href="/issues" class="text-centered">Issues</a></li>
-            <li><a href="/contact" class="text-centered">Contact</a></li>
+            <li><a href="/" class="text-centered">home</a></li>
+            <li><a href="/issues" class="text-centered">issues</a></li>
+            <li><a href="/contact" class="text-centered">contact</a></li>
         </ul>
     </nav>
     <nav class="navbar navbar-right">
         <ul>
         <% if admin_signed_in? %>
-        <li><a href="/admin" class="text-centered">Admin</a></li>
+        <li><a href="/admin" class="text-centered">admin</a></li>
         <% end %>
         <% if user_signed_in? %>
           <li><%= current_user.email %></li>
         <% else %>
-          <li><a href="/users/sign_in" class="text-centered">Sign In</a></li>
-          <li><a href="/users/sign_up" class="text-centered">Sign Up</a></li>
+          <li><a href="/users/sign_in" class="text-centered">sign in</a></li>
+          <li><a href="/users/sign_up" class="text-centered sign-up">sign up</a></li>
         <% end %>
         </ul>
     </nav>
