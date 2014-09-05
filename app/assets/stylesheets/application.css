@@ -45,12 +45,15 @@ header .navbar ul li {
 }
 
 header .navbar ul li a {
-  padding-top: 4px;
-  width: 80px;
   color: #fff;
+  font-variant: small-caps;
+  font-size: 15px;
   height: 60px;
+  letter-spacing: 1px;
   line-height: 50px;
   margin-top: -15px;
+  padding-top: 4px;
+  width: 80px;
   vertical-align: middle;
 }
 
@@ -66,6 +69,15 @@ color: #555;
 
 .side a {
   color: #555;
+}
+
+.sign-up{
+  background: rgb(255, 210, 0);
+  color: #eee;
+}
+
+header .navbar .sign-up:hover {
+  background: rgb(213, 175, 0);
 }
 
 .bugs-bar {
