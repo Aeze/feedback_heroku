@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+body, h1, h2, h3, h4, p {
+  font-family: 'Ubuntu';
+}
 
 .navbar {
   margin-bottom: 0;
@@ -88,4 +91,19 @@ header .navbar .sign-up:hover {
 .features-bar {
   background: #eee;
   min-height: 200px;
+}
+
+p {
+  font-size: 13px;
+}
+
+h2 {
+  color: #474747;
+  font-weight: 100;
+  font-size: 21px;
+}
+
+h5 {
+  font-weight: 500;
+  letter-spacing: 1px;
 }
