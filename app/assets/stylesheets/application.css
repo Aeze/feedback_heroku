@@ -103,7 +103,34 @@ h2 {
   font-size: 21px;
 }
 
+h4 {
+  font-weight: 100;
+  color: #646464;
+}
+
 h5 {
   font-weight: 500;
   letter-spacing: 1px;
 }
+
+.flash.notice {
+  color: #757575;
+  padding-bottom: 15px;
+}
+
+
+/* Top Bugs ----------------------------------------------- */
+
+.nav ul li a:hover {
+  color: #e74c3c;
+  text-decoration: none;
+}
+
+.nav-stroked li {
+  border-bottom: none;
+  font-size: 13px;
+}
+
+
+
+
