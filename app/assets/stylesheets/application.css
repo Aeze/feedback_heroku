@@ -122,7 +122,7 @@ h5 {
 /* Top Bugs ----------------------------------------------- */
 
 .nav ul li a:hover {
-  color: #e74c3c;
+  color: #7E858B;
   text-decoration: none;
 }
 
@@ -131,6 +131,33 @@ h5 {
   font-size: 13px;
 }
 
+.bugs-bar {
+  background: #DDD;
+  height: 500px;
+  margin-top: -22px;
+}
 
+.bugs-bar h4 {
+  font-weight: bold;
+  color: #4D4D4D;
+  padding-bottom: 20px;
+}
 
+.bugs-bar a {
+  margin-top: -25px;
+  margin-left: 20px;
+  line-height: 1.5em;
+  font-size: 13.5px;
+}
 
+.bugs-bar li {
+  padding-bottom: 7px;
+}
+
+header .navbar ul li {
+  color: #fff;
+}
+
+#footer header {
+  padding: 15px 30px;
+}
